@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.distutils.bdist_wheel]
+universal = true
+
+[project]
+name = "yt-dlp-NitterRedirect"
+description = "A yt-dlp extractor plugin to redirect Nitter URLs to Twitter"
+version = "2025.08.20"
+requires-python = ">=3.8"
+readme = "README.md"
+license = {file = "LICENSE"}
