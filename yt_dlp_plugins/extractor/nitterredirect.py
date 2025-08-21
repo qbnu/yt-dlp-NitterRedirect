@@ -10,6 +10,6 @@ class NitterRedirectIE(TwitterIE):
         'nuku.trabun.org',
         'lightbrd.com',
     )
-    _DOMAIN_URL = '(?:\.[a-zA-Z0-9-]+){1,2}'
-    _INSTANCES_RE = fr'(?:nitter{_DOMAIN_URL}|{"|".join(map(re.escape, INSTANCES))})'
+    _DOMAIN_RE = r'nitter(?:\.[a-zA-Z0-9-]+){1,2}'
+    _INSTANCES_RE = fr'(?:{_DOMAIN_RE}|{"|".join(map(re.escape, INSTANCES))})'
     _VALID_URL = fr'https?://{_INSTANCES_RE}/(?:[^/]+)/status/(?P<id>[0-9]+)(#.)?(?P<index>)?'
